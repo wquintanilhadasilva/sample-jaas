@@ -1,0 +1,18 @@
+<hr>
+Hello {{name}}
+
+<h5>Blogs registrados: </h5>
+
+<button class="btn btn-large btn-primary" (click)="carregarBlogs()">Carregar Blogs</button>
+
+<div class="row">
+
+  <div class="col-12">
+
+    <ul>
+      <li *ngFor="let blog of blogs">{{blog.name}}</li>
+    </ul>
+
+  </div>
+
+</div>

@@ -1,0 +1,25 @@
+<div style="text-align:center">
+  <h1>
+   Sejam bem vindo ao Lab {{title}}!!
+  </h1>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+        <a class="collection-item"
+          [routerLink]="['/basic']">Autenticação BASIC
+        </a>
+    </div>
+    <div class="col-6">
+      <a class="collection-item"
+        [routerLink]="['/forms']">Autenticação FORMS
+      </a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,68 @@
+<p style="height: 30px;"></p>
+<div class="row">
+  <div class="col-md-3 col-sm-1">
+  </div>
+  <div class="col-md-6 col-sm-10">
+
+    <form class="form-horizontal" [formGroup]="formulario" (ngSubmit)="fazerLogin()">
+
+      <div class="col-12" align="center">
+        <h4>
+          <p class="text-center">
+            Acesso à aplicação</p>
+        </h4>
+      </div>
+
+      <div class="form-group col-md-12">
+        <label for="j_username" class="control-label">Usuário</label>
+        <div class="input-group input-group-lg">
+          <span class="input-group-addon" id="sizing-addon1">@</span>
+          <input formControlName="j_username"
+              id="j_username"
+              placeholder="usuario@email.com"
+              required
+              type="text"
+              class="form-control"
+              autofocus
+              aria-describedby="sizing-addon1">
+        </div>
+      </div>
+
+      <div class="form-group col-md-12">
+        <label for="j_password" class="control-label">Senha</label>
+        <div class="input-group input-group-lg">
+          <span class="input-group-addon" id="sizing-addon1">#</span>
+          <input formControlName="j_password"
+              id="j_password"
+              required
+              type="password"
+              class="form-control"
+              autofocus
+              aria-describedby="sizing-addon1">
+        </div>
+      </div>
+
+      <div class="form-group col-md-12">
+        <div *ngIf="exibirLoginInvalido" class="alert alert-warning alert-dismissible" role="alert">
+          <strong>Atenção!</strong> Dados incorretos, verifique e tente novamente!
+        </div>
+
+        <button type="submit"
+            name="action"
+            class="btn btn-lg btn-primary btn-block">
+            Acessar
+        </button>
+
+      </div>
+
+    </form>
+
+  </div>
+  <div class="col-md-3 col-sm-1"></div>
+</div>
+
+<div class="row">
+  <div *ngIf="exibir">
+    <app-home></app-home>
+  </div>
+</div>
